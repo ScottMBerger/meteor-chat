@@ -1,0 +1,14 @@
+<header>
+  <h1>Chat App</h1>
+</header>
+ 
+<ul>
+  <li ng-repeat="task in $ctrl.tasks">
+   <strong>{{task.username}}:</strong> {{task.text}}
+  </li>
+</ul>
+
+
+<form class="new-task" ng-submit="$ctrl.addTask($ctrl.newTask)">
+  <input ng-model="$ctrl.newTask" type="text" name="text" />
+</form>
